@@ -2,6 +2,39 @@
 ** Letter: A **
 ***************
 
+The authors of this paper actually do some PCA to build models of CPU utilization! Of course, I'm not quite sure
+we can use their models or if their applications are representative of the scenarios that we're interested in, but
+it's better than nothing!
+
+tags: WORKLOAD, RESOURCE REQUIREMENTS, CPU
+
+@techreport{abrahao2004caw,
+  author       = {Abrahao, Bruno and Zhang, Alex},
+  title        = {Characterizing Application Workloads on {CPU} Utilization for Utility Computing},
+  institution  = hpl,
+  number       = {{HPL}-2004-157},
+  month        = sep,
+  year         = 2004,
+  url          = {http://www.hpl.hp.com/techreports/2004/HPL-2004-157.html}
+}
+
+This is yet another autonomic task placement / resource allocation for service hosting using VMs paper. They model
+SLAs based on the probability of exceeding a resource time, and also separate SLAs for the case of normal
+operations throughput and the case of surges. It is assumed that violations result in a penalty, and the goal
+is to maximize profit. Their algorithm is to use a nonlinear constraint satisfaction problem solver, which they
+empirically determine runs quickly enough to generate solutions in real-world scenarios. Unfortunately, they avoid
+deep discussion of their method of resource need forecasting.
+
+tags: SERVICE HOSTING, RESOURCE ALLOCATION, VM
+
+@inproceedgins{abrahao2006sas,
+  author       = {Abrahao, Bruno and Almeida, Virgilio and Almeida, Jussara and Zhang, Alex and Beyer, Dirk and Safai, Fereydoon},
+  title        = {Self-Adaptive {SLA}-Driven Capacity Management for Internet Services},
+  crossref     = {noms06},
+  pages        = {557--568}
+}
+
+
 Basically, most workstations have a lot of free memory most of the time, and we can model that.
 
 tags: NOW, MEMORY
@@ -235,7 +268,7 @@ tags: COSCHEDULING
 
 In some sense this may represent the competition for 3-tier type systems.
 
-tags: 
+tags: SERVICE HOSTING
 
 @inproceedings{appleby2001osb,
   author       = {Appleby, K. and Fakhouri, S. and Fong, Liana and Goldszmidt, G. and Kalantar, M. and Krishakumar, S. and Pazel, D. P. and Pershing, J. and Rochwerger, B.},
@@ -461,7 +494,7 @@ tags: BENCHMARK
   author       = {Bailey, David and Harris, Tim and Saphir, William and van der Wijngaart, Rob and Woo, Alex and Yarrow, Maurice},
   title        = {The {NAS} Parallel Benchmarks 2.0},
   institution  = nasa_supercomputing,
-  number       = {NAS-95-020},
+  number       = {{NAS}-95-020},
   year         = 1995,
   url          = {http://www.nas.nasa.gov/News/Techreports/1995/PDF/nas-95-020.pdf} 
 }
@@ -758,9 +791,10 @@ tags: HEURISTICS, BIN PACKING
   pages        = {1--19}
 }
 
-README
+A vm cluster paper that considers both online (service hosting) and batch workloads. Some discussion of traces and
+how they run their simulations, but nothing we can work with directly.
 
-tags: RESOURCE REQUIREMENTS, PERFORMANCE MODELING
+tags: RESOURCE REQUIREMENTS, PERFORMANCE MODELING, RESOURCE ALLOCATION, SERVICE HOSTING, UTILITY
 
 @inproceedings{bennani2005raa,
   author       = {Bennani, Mohamed N. and Menasc{\'e}, Daniel A.},
@@ -820,9 +854,9 @@ README README README CITEME
 Oh wow. This paper is super relevant. Identification of candidates for moving based on predictors, charatarization of CPU utilization, 
 the works. Need to re-read thoroughly and go over citations.
 
-tags: VM CLUSTER, SLA, RESOURCE REQUIREMENTS
+tags: VM CLUSTER, SLA, RESOURCE REQUIREMENTS, SERVICE HOSTING
 
-@inproceedings{bobroff2008dpv,
+@inproceedings{bobroff2007dpv,
   author       = {Bobroff, Norman and Kochut, Andrzej and Beaty, Kirk},
   title        = {Dynamic Placement of Virtual Machines for Managing {SLA} Violations},
   crossref     = {im07},
@@ -841,6 +875,20 @@ tags: VM
   pages        = {190--206}
 }
 
+These guys run a simulation based on the 1998 world cup web server request trace, which is a little dated. They
+found a linear regression based on the last 5 minutes, which seems consistent with a lot of these kind of studies.
+They suggest using an approach based on statistical machine learning to generate models of expected needs.
+
+tags: ENERGY, VM, RESOURCE ALLOCATION
+
+@techreport{bodik2008acf,
+  author       = {Bodik, Peter and Armbrust, Michael and Canini, Kevin and Fox, Armando and Jordan, Michael and Patterson, David},
+  title        = {A Case for Adaptive Datacenters to Conserve Energy and Improve Reliability},
+  institution  = ucbeecs,
+  number       = {{UCB/EECS}-2008-127},
+  month        = sep,
+  year         = 2008
+}
 tags: MPI, GRID
 
 @inproceedings{bouteiller2004hps,
@@ -1122,7 +1170,7 @@ Talks about Muse, which is a system that can assign and move around jobs. They
 use an economic model to minimize the number of active servers while
 maintaining SLAs.
 
-tags: ENERGY, SLA
+tags: ENERGY, SLA, SERVICE HOSTING
 
 @inproceedings{chase2001mes,
   author       = {Chase, Jeffrey S. and Anderson, Darrell C. and Thakar, Prachi N. and Vahdat, Amin M. and Doyle, Ronald P.},
@@ -3499,6 +3547,27 @@ tags: RESOURCE REQUIREMENTS
   pages        = {289--302}
 }
 
+This is yet another dynamic-resource-allocation-using-vms-for-service-hosting
+paper. They propose an "online model estimator", which is really what we want
+too. They primarily look at CPU and disk I/O resources. They define a quantity
+called the "normalized performance", very similar to the yield, and try to
+optimize a utility function based on deviation from optimal performance and
+amount of change in resource allocation (to maintain stability). They also
+handle complex relationships between related tasks. They perform benchmarks
+based on RuBiS, TPC-W and CPU traces from a SAP service. The system discussed
+in this paper does not use migration, but they discuss using it on persistently
+overloaded systems and note that adding facilities for migration is left to
+future work...so maybe we can combine with this?
+
+tags: SERVICE HOSTING, VM, RESOURCE ALLOCATION, PERFORMANCE MODELING, RESOURCE REQUIREMENTS, CPU, I/O
+
+@inproceedings{padala2009acm,
+  author       = {Padala, Pradeep and Hou, Kai-Yuan and Shin, Kang G. and Zhu, Xiaoyun and Uysal, Mustafa and Wang, Zhikui and Singhal, Sharad and Merchant, Arif},
+  title        = {Automated Control of Multiple Virtualized Resources},
+  crossref     = {eurosys09},
+  pages        = {13--26}
+}
+
 tags:
 
 @inproceedings{patterson1995ipc,
@@ -4330,7 +4399,7 @@ tags:
 
 README
 
-tags: SLA, VM CLUSTER, CLOUD
+tags: SLA, VM CLUSTER, CLOUD, SERVICE HOSTING
 
 @inproceedings{van2009sav,
   author       = {Nguyen Van, Hien and Dang Tran, Fr{\'e}d{\'e}ric and Menaud, Jean-Marc},
