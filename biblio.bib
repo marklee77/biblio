@@ -27,7 +27,7 @@ deep discussion of their method of resource need forecasting.
 
 tags: SERVICE HOSTING, RESOURCE ALLOCATION, VM
 
-@inproceedgins{abrahao2006sas,
+@inproceedings{abrahao2006sas,
   author       = {Abrahao, Bruno and Almeida, Virgilio and Almeida, Jussara and Zhang, Alex and Beyer, Dirk and Safai, Fereydoon},
   title        = {Self-Adaptive {SLA}-Driven Capacity Management for Internet Services},
   crossref     = {noms06},
@@ -1191,6 +1191,8 @@ tags: THEORY, STRETCH
   pages        = {84--93}
 }
 
+README?
+
 tags: THEORY
 
 @inproceedings{chekuri2004msm,
@@ -1732,6 +1734,15 @@ tags: THEORY, BIN PACKING, BIN STRETCHING, VECTOR PACKING
   volume       = 16,
   year         = 2003,
   pages        = {47--56}
+}
+
+tags: VECTOR PACKING, VECTOR ASSIGNMENT
+
+@incollection{epstein2002vap,
+  author       = {Epstein, Leah and Tassa, Tamir},
+  title        = {Vector Assignment Problems: A General Framework},
+  crossref     = {esa02},
+  pages        = {461--472}
 }
 
 tags: THEORY, BIN PACKING, ADAPTATION
@@ -3289,6 +3300,18 @@ tags: VM CLUSTER
   pages        = {167--181}
 }
 
+Pretty theoretical; he basically makes the assumption that jobs execute in time demand/total-load * cpu share,
+which is kind of obvious. Beam search is used to search the space of possible cpu allocations, which is 
+interesting, but there isn't a lot of new information here for us to work with.
+
+tags: VM, RESOURCE ALLOCATION
+
+@inproceedings{menasce2006ave,
+  author       = {Menasc{\'e}, Daniel A. and Bennani, Mohamed N.},
+  title        = {Autonomic Virtualized Environments},
+  crossref     = {icas06},
+}
+
 same ol', same ol'
 
 tags: VM CLUSTER
@@ -3310,6 +3333,18 @@ tags: BURSTINESS
   title        = {Burstiness in Multi-Tier Applications: Symptoms, Causes, and New Models},
   crossref     = {middleware08},
   pages        = {265--286}
+}
+
+This paper talks about a model for distributing a workload in a data center based on the idea of minimizing
+hotspots in order to reduce cooling costs. It's certainly something to consider!
+
+tags: ENERGY
+
+@inproceedings{moore2005msc,
+  author       = {Moore, Justin and Chase, Jeff and Ranganathan, Parthasarathy and Sharma, Ratnesh},
+  title        = {Making Scheduling ``Cool'': Temperature-Aware Workload Placement in Data Centers},
+  crossref     = {usenix05},
+  pages        = {61--74}
 }
 
 GangLL -- 
@@ -3368,6 +3403,20 @@ tags: COSCHEDULING
   number       = 2,
   year         = 1999,
   pages        = {302--327}
+}
+
+VM-based energy budgeting for heterogeneous platforms. Not super exciting. No new models or algorithms really.
+
+tags: VM, ENERGY
+
+@article{nathuji2009vtv,
+  author       = {Nathuji, Ripal and Schwan, Karsten and Somani, Ankit and Joshi, Yogendra},
+  title        = {{VPM} tokens: virtual machine-aware power budgeting in datacenters},
+  journal      = cluster,
+  volume       = 12,
+  number       = 2,
+  year         = 2009,
+  pages        = {189--203}
 }
 
 virtualization of memory cache hierarchy
