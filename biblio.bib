@@ -712,6 +712,17 @@ tags: THEORY
   pages        = {51--58}
 }
 
+The authors of this paper show that task-allocation as 2-d vector bin packing is tractable if the number
+of possible types of tasks is limited and give a p-time algorithm for this case.
+
+tags: SCHEDULING, VECTOR PACKING
+
+@inproceedings{baruah2004dpa,
+  author       = {Baruah, Sanjoy and Fisher, Nathan},
+  title        = {A Dynamic Programming Approach to Task Partitioning upon Memory-constrained Multiprocessors},
+  crossref     = {rtcsa04}
+}
+
 In this paper the authors do a short study on predicting job memory
 requirements both from an analysis of the static binary and records of past
 behavior, and then proceed to show how these predictions can be used in a gang
@@ -740,6 +751,35 @@ tags: THEORY, BIN PACKING
   title        = {Fast Approximate {PCP}s for Multidimensional Bin-Packing Problems},
   crossref     = {random99},
   pages        = {245--256}
+}
+
+Okay, they assume serial batch jobs that are run multiple times and base a model on resource utilization when
+alone on the system. Their model is to assume that applications have distinct "stages", where resource consumption
+of cpu, disk i/o, network bandwidth and memory is mostly consistent during a stage. That is, the model consists
+of a sequence of average values. The use aggregate cpu consumption to try to guess which stage the current 
+execution is in. They note a linear correspondence between resource requirements, (e.g., throttling cpu to 50%
+also reduces disk i/o and network bandwidth by the same factor), except for memory, where underprovisioning leads
+to swapping and unpredictable impacts.
+
+tags: BATCH, VM, RESOURCE ALLOCATION, RESOURCE REQUIREMENTS
+
+@inproceedings{becerra2009bjp,
+  author       = {Becerra, Yolanda and Carrera, David and Ayguad{\'e}, Eduard},
+  title        = {Batch Job Profiling and Adaptive Profile Enforcement for Virtualized Environments},
+  crossref     = {pdp09},
+  pages        = {414--418}
+}
+
+Heterogeneous vector bin packing heuristics for jobs scheduling! It also considers the need to avoid overloading
+the data bus.
+
+tags: VM, VECTOR PACKING
+
+@inproceedings{beck1996mmt,
+  author       = {Beck, James E. and Siewiorek, Daniel P.},
+  title        = {Modeling Multicomputer Task Allocation as a Vector Packing Problem},
+  crossref     = {isss96},
+  pages        = {115--120}
 }
 
 The primary contribution of this paper is that it defines the max-flow and
@@ -1116,6 +1156,29 @@ tags: UTILITY, FAIRNESS
   title        = {Utility-based placement of dynamic web applications with fairness goals},
   crossref     = {noms08},
   pages        = {9--16}
+}
+
+Simulation study of scheduling competing parallel task graphs. Not much in the way of theoretical results, but 
+interesting and potentially relevant to yield-based scheduling approaches.
+
+tags: SCHEDULING, PTG
+
+@article{casanova2010ocr,
+  author       = {Casanova, Henri and Desprez, Fr{\'e}d{\'e}ric and Suter, Fr{\'e}d{\'e}ric},
+  title        = {On Cluster Resource Allocation for Multiple Parallel Task Graphs},
+  journal      = jpdc,
+  volume       = 70,
+  number       = 12,
+  year         = 2010,
+  pages        = {1193--1203}
+}
+
+tags: SCHEDULING, PTG
+
+@inproceedings{casanova2010msm,
+  author       = {Casanova, Henri and Desprez, Fr{\'e}d{\'e}ric and Suter, Fr{\'e}d{\'e}ric},
+  title        = {Minimizing Stretch and Makespan of Multiple Parallel Task Graphs via Malleable Allocations},
+  crossref     = {icpp10},
 }
 
 On the targeted multicore system around 50% of the communication events seem to
@@ -1697,6 +1760,16 @@ tags: VM CLUSTER, PREEMPTION
   crossref     = {hapcw06}
 }
 
+tags: VECTOR PACKING, VECTOR ASSIGNMENT
+
+@incollection{epstein2002vap,
+  author       = {Epstein, Leah and Tassa, Tamir},
+  title        = {Vector Assignment Problems: A General Framework},
+  crossref     = {esa02},
+  pages        = {461--472}
+}
+
+
 tags: THEORY, BIN PACKING, BIN STRETCHING
 @article{epstein2003bsr,
   author       = {Epstein, Leah},
@@ -1738,12 +1811,15 @@ tags: THEORY, BIN PACKING, BIN STRETCHING, VECTOR PACKING
 
 tags: VECTOR PACKING, VECTOR ASSIGNMENT
 
-@incollection{epstein2002vap,
+@incollection{epstein2003vap,
   author       = {Epstein, Leah and Tassa, Tamir},
   title        = {Vector Assignment Problems: A General Framework},
-  crossref     = {esa02},
-  pages        = {461--472}
+  journal      = j_algorithms,
+  volume       = 48,
+  year         = 2003,
+  pages        = {360--384}
 }
+
 
 tags: THEORY, BIN PACKING, ADAPTATION
 
@@ -2031,6 +2107,17 @@ tags: METRICS, RESOURCE REQUIREMENTS
   title        = {An Empirical Investigation of Load Indices for Load Balancing Applications},
   crossref     = {performance87},
   pages        = {515--528}
+}
+
+The authors of this paper give a MILP for the resource allocation problem considering 2 resources (CPU and memory)
+and then use the relaxation of the MILP to develop a heuristic that is a bit more sophisticated than RRNZ.
+
+tags: EMBEDDED, SCHEDULING, VECTOR PACKING, MILP, HEURISTIC
+
+@inproceedings{fisher2005tpu,
+  author       = {Fisher, Nathan and Anderson, James H. and Baruah, Sanjoy},
+  title        = {Task partitioning upon memory-constrained multiprocessors},
+  crossref     = {rtcsa05}
 }
 
 This paper describes Flexible co-scheduling, wherein processes are divided into
@@ -2477,6 +2564,20 @@ tags: THEORY, BIN PACKING
   pages        = {239--261}
 }
 
+This is a fairly high level paper that just proposes to have virtual hypervisors manage local hypervisors. 
+The propose a basic reallocation algorithm, but it basically just says that for each vm on an overloaded server, 
+find another server that can host it--continue until no longer overloaded. If no host can be found for a given
+vm then they say to just turn on another server.
+
+tags: VM, CLOUD 
+
+@inproceedings{head2010vhe,
+  author       = {Head, Michael R. and Kochut, Andrzej and Schulz, Charles and Shaikh, Hidayatullah},
+  title        = {Virtual Hypervisor: Enabling Fair and Economical Resource Partitioning in Cloud Environments},
+  crossref     = {noms10},
+  pages        = {104--111}
+}
+
 tags: ENERGY, VM CLUSTER
 
 @inproceedings{hermenier2006pmg,
@@ -2568,6 +2669,24 @@ tags: GANG
   pages        = {217--230}
 }
 
+The authors consider a data center that services a multi-tier web service
+workload. Nodes are homogeneous and perfectly load balanced within a tier, but
+may be heterogeneous globally. Nodes are also equipped with DVS and multiple
+sleep states, and node state and workload placement can both be coordinated by
+a central controller. They attempt to minimize power consumption while
+maintaining performance that is within a bound of that without power saving
+features, and achieve around 23\% savings on average. They validate their model
+in simulation and on a physical cluster using the TPC-W benchmark.
+
+tags: VM CLUSTER, ENERGY
+
+@inproceedings{horvath2008mem,
+  author       = {Horvath, Tibor and Skadron, Kevin},
+  title        = {Multi-mode Energy Management for Multi-tier Server Clusters},
+  crossref     = {pact08},
+  pages        = {270--279}
+}
+
 tags: WORKLOAD
 
 @incollection{hotovy1996wec,
@@ -2575,6 +2694,28 @@ tags: WORKLOAD
   title        = {Workload evolution on the {Cornell Theory Center IBM SP2}},
   crossref     = {jsspp96},
   pages        = {27--40}
+}
+
+This one preceeds the ding paper in referencing energy delay product. Seems to be a different group though. The
+real difference is that they hand-pick the regions whereas the later paper tries to derive them automatically.
+
+tags: ENERGY 
+
+@inproceedings{hotta2006pbo,
+  author       = {Hotta, Yoshihiko and Sato, Mitsuhisa and Kimura, Hideaki and Matsuoka, Satoshi and Boku, Taisuke and Takahashi, Daisuke},
+  title        = {Profile-based Optimization of Power Performance by using Dynamic Voltage Scaling on a {PC} cluster},
+  crossref     = {ipdps06}
+}
+
+The authors are somewhat inspired by Urgaonkar, but they try to make statistical guarantees about the likelyhood of a QoS violation.
+
+tags: VM, SERVICE HOSTING, SCHEDULING, RESOURCE REQUIREMENTS
+
+@inproceedings{hoyer2010ssc,
+  author       = {Hoyer, Marko and Schr{\"o}der and Nebel, Wolfgang},
+  title        = {Statistical static capacity management in virtualized data centers supporting fine grained {QoS} specification},
+  crossref     = {eenergy10},
+  pages        = {51--60}
 }
 
 This paper basically says that overhead is low and we can reduce network
@@ -2611,7 +2752,17 @@ tags: THEORY, VECTOR PARTITION
 ** Letter: I **
 ***************
 
-FIXME
+Blah, no good analytic model, in fact they explicitly avoid trying to come up
+with one arguing instead that we should just use neural networks.
+
+tags: PERFORMANCE MODELING, NEURAL NETWORKS
+
+@incollection{ipec2005app,
+  author       = {Ipek, Engin and de Supinski, Bronis R. and Schulz, Martin and McKee, Sally A.},
+  title        = {An Approach to Performance Prediction for Parallel Applications},
+  crossref     = {europar05},
+  pages        = {196--205}
+}
 
 tags:
 
@@ -3025,6 +3176,19 @@ tags: UTILITY
   pages        = {107--116}
 }
 
+This paper addresses scheduling a DAG on a cluster of somewhat heterogeneous (2 different types) of DVFS-enabled
+nodes, each with a set of allowed performance/voltage settings. The authors basically consider and try to optimize
+a linear combination of energy consumption and performance in terms of makespan.
+
+tags: ENERGY, SCHEDULING
+
+@inproceedings{lee2009mec,
+  author       = {Lee, Young Choon and Zomaya, Albert Y.},
+  title        = {Minimizing Energy Consumption for Precedence-constrained Applications Using Dynamic Voltage Scaling},
+  crossref     = {ccgrid09},
+  pages        = {92--99}
+}
+
 README
 
 tags: THEORY, STRETCH
@@ -3123,6 +3287,17 @@ tags: WORKLOAD
   number       = 1,
   year         = 2009,
   pages        = {1--20}
+}
+
+The basic idea here is to try a couple different algorithms for automatically breaking a program up into
+computation and communication regions and then lowering the power on the CPU during communications.
+
+tags: ENERGY, DYNAMIC VOLTAGE FREQUENCY SCALING, REGION FINDING
+
+@inproceedings{lim2006atf,
+  author       = {Lim, Min Yeol and Freeh, Vincent W and Lowenthal, David K.},
+  title        = {Adaptive, Transparent Frequency and Voltage Scaling of Communication Phases in {MPI} Programs},
+  crossref     = {sc06}
 }
 
 tags: VM, I/O
@@ -3298,6 +3473,21 @@ tags: VM CLUSTER
   title        = {{U}sher: An Extensible Framework for Managing Clusters of Virtual Machines},
   crossref     = {lisa07},
   pages        = {167--181}
+}
+
+This is yet another sort of generic VMs for service hosting paper. They take historic data
+(CPU utilization) and average it to get resource requirements, but propose in the future to use 
+smarter predictive modeling. They formulate a generic constraint satisfaction problem that in theory
+can accomodate any number of static or dynamic resource constraints and find a solution using a solver.
+They mention Leinberger but don't use the heuristics.
+
+tags: VM, RESOURCE ALLOCATION, SERVICE HOSTING, RESOURCE REQUIREMENTS
+
+@inproceedings{mehta2008rtr,
+  author       = {Mehta, Sameep and Neogi, Anindya},
+  title        = {{ReCon}: A to to {\bf Re}commend Dynamic Server {\bf Con}solidation in Multi-Cluster Data Centers},
+  crossref     = {noms08},
+  pages        = {363--370}
 }
 
 Pretty theoretical; he basically makes the assumption that jobs execute in time demand/total-load * cpu share,
@@ -3647,6 +3837,18 @@ tags: COSCHEDULING
   title        = {Time-sharing Parallel Jobs in the Presence of Multiple Resource Requirements},
   crossref     = {jsspp00},
   pages        = {113--136}
+}
+
+The authors present the problem of scheduling jobs to meet QoS constraints as a varible-sized bin packing problem.
+They provide a MILP and run some simulation experiments based on real trace data using CPLEX.
+
+tags: VM CLUSTER, SERVICE HOSTING, BIN PACKING, ENERGY, MILP, OPTIMIZATION, DVFS
+
+@inproceedings{pettruci2010ado,
+  author       = {Petrucci, Vinicius and Loques, Orlando and Moss{\'e}, Daniel},
+  title        = {A dynamic optimization model for power and performance management of virtualized clusters},
+  crossref     = {eenergy10},
+  pages        = {225--233}
 }
 
 This paper describes Ganeti, google's VM server platform. They just use Haskell
@@ -4224,6 +4426,20 @@ tags: GANG
   pages        = {55--62}
 }
 
+The focus of this paper is on embeded multiprocessor synthesis, that is, designing multiprocessors to run known
+dags with minimal resource requirements. The authors present a heuristic for packing temporary communicating tasks
+with dependencies on nodes with limited cpu and memory capacities. 
+
+tags: EMBEDDED, SCHEDULING, VECTOR PACKING
+
+@inproceedings{szymanek2000tas,
+  author       = {Szymanek, Radoslaw and Kuchcinski, Krzysztof},
+  title        = {Task Assignment and Scheduling under Memory Constraints},
+  crossref     = {euromicro00},
+  pages        = {1084--1090}
+}
+  
+
 ***************
 ** Letter: T **
 ***************
@@ -4258,6 +4474,16 @@ tags:
   title        = {A scalable application placement controller for enterprise data centers},
   crossref     = {www07},
   pages        = {331--340}
+}
+
+tags: DYNAMIC, OPTIMIZATION, MULTI-OBJECTIVE
+
+@misc{tantar2010dcd,
+  author       = {Tandar, Alexandru-Adrian and Tantar, Emilia and Bouvry, Pascal},
+  title        = {Design and classification of dynamic multi-objective optimization problems},
+  month        = nov,
+  year         = 2010,
+  howpublished = {arXiv:1103.4820v1}
 }
 
 Okay, this paper considers a sort of multi-criteria fuzzy optimization problem version. Lots
@@ -4351,7 +4577,7 @@ tags: RESOURCE REQUIREMENTS?
 
 README
 
-tags: RESOURCE REQUIREMENTS
+tags: RESOURCE REQUIREMENTS, SERVICE HOSTING
 
 @article{urgaonkar2002roa,
   author       = {Urgaonkar, Bhuvan and Shenoy, Prashant and Roscoe, Timothy},
