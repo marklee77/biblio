@@ -488,6 +488,17 @@ tags: THEORY
 ** Letter: B **
 ***************
 
+The authors of this paper are mostly concerned with proper scheduling of vcpus on real cpus for multithreaded
+parallel processes contained in a single VM. So it's relevant but not quite our area at the moment.
+
+tags: VM, COSCHEDULING, XEN
+
+@inproceedings{bai2010tab,
+  author       = {Bai, Yuebin and Xu, Cong and Li, Zhi},
+  title        = {Task-aware based Co-scheduling for Virtual Machine System},
+  crossref     = {sac10}
+}
+
 tags: BENCHMARK
 
 @techreport{bailey1995npb,
@@ -1312,6 +1323,8 @@ tags: THEORY, BIN STRETCHING
 
 This paper just shows some statistics for CPU load caused by I/O activity under
 Xen, not sure I have much use for it.
+
+REFERENCE ME
 
 tags: VM, I/O
 
@@ -2435,9 +2448,11 @@ tags: VIRTUAL CLUSTER
   pages        = {229--262}
 }
 
-README
+The authors develop a communication aware co-scheduler that skews priority for communicating jobs and Domain-0
+and perform experiments to show that it improves the performance of the TPC-W benchmark. Unfortunately, I don't
+know if there's any code available.
 
-tags:
+tags: VM CLUSTER, COSCHEDULING, XEN
 
 @inproceedings{govindan2007xcc,
   author       = {Govindan, Sriram and Nath, Arjun R. and Das, Amitayu and Urgaonkar, Bhuvan and Sivasubramaniam, Anand},
