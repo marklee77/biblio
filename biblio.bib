@@ -1135,6 +1135,12 @@ tags: VM CLUSTER
   year         = 2006
 }
 
+@inproceedings{campbell2009occ,
+  author      = {Campbell, Roy and Gupta, Indranil and Heath, Michael and Ko, Steven Y. and Kozuch, Michael and Kunze, Marcel and Kwan, Thomas and Lai, Kevin and Lee, Hing Yan and Lyons, Martha and Milojicic, Dejan and O'Halloran, David and Soh, Yeng Chai},
+  title       = {Open Cirrus\textsuperscript{\texttrademark} Cloud Computing Testbed: Federated Data Centers for Open Source Systems and Services Research},
+  crossref    = {hotcloud09}
+}
+
 Okay, so they basically give a MILP formulation, some heuristics, and some
 exact algorithms and compare them. One nice thing they do that we don't is
 prove some approximability results, so maybe we should consider that problem.
@@ -1667,10 +1673,27 @@ maybe use in examples of non-hpc clusters?
 tags:
 
 @inproceedings{dean2004msd,
-  author       = {Dean, Jeff and Ghemawat, Sanjay},
+  author       = {Dean, Jeffrey and Ghemawat, Sanjay},
   title        = {{MapReduce}: Simplified data processing on large clusters},
   crossref     = {osdi04},
   pages        = {137--150}
+}
+
+@article{dean2008msd,
+  author       = {Dean, Jeffrey and Ghemawat, Sanjay},
+  title        = {{MapReduce}: Simplified data processing on large clusters},
+  journal      = cacm,
+  volume       = 51,
+  number       = 1,
+  month        = jan,
+  year         = 2008,
+  pages        = {107--113}
+}
+
+@inproceedings{deelman2008cds,
+  author       = {Deelman, E. and Singh, G. and Livny, M. and Berriman, B. and Good, J.},
+  title        = {The cost of doing science on the cloud: the montage example},
+  crossref     = {sc08}
 }
 
 tags: VIRTUAL MACHINE, VM, HPC
@@ -3025,6 +3048,13 @@ tags: RESOURCE REQUIREMENTS
   pages        = {595--604}
 }
 
+@inproceedings{keahey2008sce,
+  author       = {Keahey, K. and Figueiredo, R. and Fortes, J. and Freeman, T. and Tsugawa, M.}
+  title        = {Science clouds: Early experiences in cloud computing for scientific applications},
+  crossref     = {cca08}
+}
+
+
 README
 
 tags: THEORY, VECTOR PARTITION
@@ -3383,6 +3413,12 @@ tags: WORKLOAD
   number       = 1,
   year         = 2009,
   pages        = {1--20}
+}
+
+@inproceedings{li2010ecm,
+  author       = {Li, Jie and Agarwal, Deb and Humphrey, Marty and van Ingen, Catharine and Jackson, Keith and Ryu, Youngryel},
+  title        = {{eScience} in the Cloud: A {MODIS} Satellite Data Reprojection and Reduction Pipeline in the {Windows Azure} Platform},
+  crossref     = {ipdps10}
 }
 
 The basic idea here is to try a couple different algorithms for automatically breaking a program up into
@@ -5309,6 +5345,11 @@ tags: RUNTIME ESTIMATES, BATCH
   url          = {http://www-03.ibm.com/press/us/en/pressrelease/22613.wss}
 }
 
+@misc{ibm-smart-cloud,
+  title        = {{IBM} SmartCloud},
+  url          = {http://www.ibm.com/ibm/cloud}
+}
+
 @misc{amazon-ec2,
   title        = {{A}mazon Elastic Compute Cloud},
   url          = {http://aws.amazon.com/ec2}
@@ -5334,3 +5375,22 @@ tags: RUNTIME ESTIMATES, BATCH
   url          = {http://itknowledgeexchange.techtarget.com/server-farm/virtual-machines-per-server-a-viable-metric-for-hardware-selection/},
   note         = {Online, August 2008, retrieved September 2011}
 }
+
+@misc{hpanim,
+  author       = {Hewlett-Packard},
+  title        = {Servicing the Animation Industry: {HP}'s utility rendering service provides on-demand computing resources},
+  url          = {http://www.hpl.hp.com/SE3D/whitepaper-urs.pdf},
+  month        = jul,
+  year         = 2004
+}
+
+@misc{windows-azure,
+  title        = {{MicroSoft Windows Azure}},
+  url          = {http://www.microsoft.com/windowsazure/}
+}
+
+@misc{google-app-engine,
+  title        = {{Google AppEngine}},
+  url          = {http://code.google.com/appengine/}
+}
+
