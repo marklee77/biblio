@@ -2,8 +2,9 @@
 ** Letter: A **
 ***************
 
-The authors of this paper actually do some PCA to build models of CPU utilization! Of course, I'm not quite sure
-we can use their models or if their applications are representative of the scenarios that we're interested in, but
+The authors of this paper actually do some PCA to build models of CPU
+utilization! Of course, I'm not quite sure we can use their models or if their
+applications are representative of the scenarios that we're interested in, but
 it's better than nothing!
 
 tags: WORKLOAD, RESOURCE REQUIREMENTS, CPU
@@ -18,12 +19,15 @@ tags: WORKLOAD, RESOURCE REQUIREMENTS, CPU
   url          = {http://www.hpl.hp.com/techreports/2004/HPL-2004-157.html}
 }
 
-This is yet another autonomic task placement / resource allocation for service hosting using VMs paper. They model
-SLAs based on the probability of exceeding a resource time, and also separate SLAs for the case of normal
-operations throughput and the case of surges. It is assumed that violations result in a penalty, and the goal
-is to maximize profit. Their algorithm is to use a nonlinear constraint satisfaction problem solver, which they
-empirically determine runs quickly enough to generate solutions in real-world scenarios. Unfortunately, they avoid
-deep discussion of their method of resource need forecasting.
+This is yet another autonomic task placement / resource allocation for service
+hosting using VMs paper. They model SLAs based on the probability of exceeding a
+resource time, and also separate SLAs for the case of normal operations
+throughput and the case of surges. It is assumed that violations result in a
+penalty, and the goal is to maximize profit. Their algorithm is to use a
+nonlinear constraint satisfaction problem solver, which they empirically
+determine runs quickly enough to generate solutions in real-world scenarios.
+Unfortunately, they avoid deep discussion of their method of resource need
+forecasting.
 
 tags: SERVICE HOSTING, RESOURCE ALLOCATION, VM
 
@@ -396,7 +400,7 @@ tags: THEORY
   pages        = {422--441}
 }
 
-The idea is that incomming tasks with known requirements and limited but
+The idea is that incoming tasks with known requirements and limited but
 unknown duration must be scheduled so as to minimize the maximum load. Each
 task can run on only a subset of the available servers, so there may be
 something useful here. One caveat: the subset of servers capable of running the
@@ -500,8 +504,9 @@ tags: THEORY
 ** Letter: B **
 ***************
 
-The authors of this paper are mostly concerned with proper scheduling of vcpus on real cpus for multithreaded
-parallel processes contained in a single VM. So it's relevant but not quite our area at the moment.
+The authors of this paper are mostly concerned with proper scheduling of vcpus
+on real cpus for multithreaded parallel processes contained in a single VM. So
+it's relevant but not quite our area at the moment.
 
 tags: VM, COSCHEDULING, XEN
 
@@ -776,13 +781,15 @@ tags: THEORY, BIN PACKING
   pages        = {245--256}
 }
 
-Okay, they assume serial batch jobs that are run multiple times and base a model on resource utilization when
-alone on the system. Their model is to assume that applications have distinct "stages", where resource consumption
-of cpu, disk i/o, network bandwidth and memory is mostly consistent during a stage. That is, the model consists
-of a sequence of average values. The use aggregate cpu consumption to try to guess which stage the current 
-execution is in. They note a linear correspondence between resource requirements, (e.g., throttling cpu to 50%
-also reduces disk i/o and network bandwidth by the same factor), except for memory, where underprovisioning leads
-to swapping and unpredictable impacts.
+Okay, they assume serial batch jobs that are run multiple times and base a model
+on resource utilization when alone on the system. Their model is to assume that
+applications have distinct "stages", where resource consumption of cpu, disk
+i/o, network bandwidth and memory is mostly consistent during a stage. That is,
+the model consists of a sequence of average values. The use aggregate cpu
+consumption to try to guess which stage the current execution is in. They note a
+linear correspondence between resource requirements, (e.g., throttling cpu to
+50% also reduces disk i/o and network bandwidth by the same factor), except for
+memory, where underprovisioning leads to swapping and unpredictable impacts.
 
 tags: BATCH, VM, RESOURCE ALLOCATION, RESOURCE REQUIREMENTS
 
@@ -854,8 +861,9 @@ tags: HEURISTICS, BIN PACKING
   pages        = {1--19}
 }
 
-A vm cluster paper that considers both online (service hosting) and batch workloads. Some discussion of traces and
-how they run their simulations, but nothing we can work with directly.
+A vm cluster paper that considers both online (service hosting) and batch
+workloads. Some discussion of traces and how they run their simulations, but
+nothing we can work with directly.
 
 tags: RESOURCE REQUIREMENTS, PERFORMANCE MODELING, RESOURCE ALLOCATION, SERVICE HOSTING, UTILITY
 
@@ -914,8 +922,9 @@ tags: VM CLUSTER
 
 README README README CITEME
 
-Oh wow. This paper is super relevant. Identification of candidates for moving based on predictors, charatarization of CPU utilization, 
-the works. Need to re-read thoroughly and go over citations.
+Oh wow. This paper is super relevant. Identification of candidates for moving
+based on predictors, charatarization of CPU utilization, the works. Need to
+re-read thoroughly and go over citations.
 
 tags: VM CLUSTER, SLA, RESOURCE REQUIREMENTS, SERVICE HOSTING
 
