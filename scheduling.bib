@@ -593,8 +593,9 @@ tags: THEORY, ADAPTATION
   pages        = {139--148}
 }
 
-In a nutshell: even though slow inter-cluster links can negatively affect the performance of jobs run on 
-multiple clusters, the benefit to overall performance can make the trade-off worthwhile.
+In a nutshell: even though slow inter-cluster links can negatively affect the
+performance of jobs run on multiple clusters, the benefit to overall performance
+can make the trade-off worthwhile.
 
 tags: MULTICLUSTER
 
@@ -740,8 +741,9 @@ tags: THEORY
   pages        = {51--58}
 }
 
-The authors of this paper show that task-allocation as 2-d vector bin packing is tractable if the number
-of possible types of tasks is limited and give a p-time algorithm for this case.
+The authors of this paper show that task-allocation as 2-d vector bin packing is
+tractable if the number of possible types of tasks is limited and give a p-time
+algorithm for this case.
 
 tags: SCHEDULING, VECTOR PACKING
 
@@ -800,8 +802,8 @@ tags: BATCH, VM, RESOURCE ALLOCATION, RESOURCE REQUIREMENTS
   pages        = {414--418}
 }
 
-Heterogeneous vector bin packing heuristics for jobs scheduling! It also considers the need to avoid overloading
-the data bus.
+Heterogeneous vector bin packing heuristics for jobs scheduling! It also
+considers the need to avoid overloading the data bus.
 
 tags: VM, VECTOR PACKING
 
@@ -907,10 +909,11 @@ tags: VM CLUSTER
 
 This is a simple-ish paper, but also has a bin-packing angle.
 
-Contains reference to Gartner Group report claiming typical server utilization is around 20%.
+Contains reference to Gartner Group report claiming typical server utilization
+is around 20%.
 
-There are also some references here on using virtualization to improve utilization, but the
-exact sources are unclear.
+There are also some references here on using virtualization to improve
+utilization, but the exact sources are unclear.
 
 tags: VM CLUSTER
 
@@ -935,8 +938,8 @@ tags: VM CLUSTER, SLA, RESOURCE REQUIREMENTS, SERVICE HOSTING
   pages        = {119--128}
 }
 
-This paper basically says that it's feasible to launch thousands of virtual machines at a
-time. Not very exciting at all.
+This paper basically says that it's feasible to launch thousands of virtual
+machines at a time.
 
 tags: VM
 
@@ -947,9 +950,11 @@ tags: VM
   pages        = {190--206}
 }
 
-These guys run a simulation based on the 1998 world cup web server request trace, which is a little dated. They
-found a linear regression based on the last 5 minutes, which seems consistent with a lot of these kind of studies.
-They suggest using an approach based on statistical machine learning to generate models of expected needs.
+These guys run a simulation based on the 1998 world cup web server request
+trace, which is a little dated. They found a linear regression based on the last
+5 minutes, which seems consistent with a lot of these kind of studies.  They
+suggest using an approach based on statistical machine learning to generate
+models of expected needs.
 
 tags: ENERGY, VM, RESOURCE ALLOCATION
 
@@ -1052,8 +1057,8 @@ tags:
   pages        = {421--430}
 }
 
-This paper basically describes the VAMPIR approach for performance profiling on clusters. No actual 
-profiling results.
+This paper basically describes the VAMPIR approach for performance profiling on
+clusters. No actual profiling results.
 
 tags: 
 
@@ -1203,8 +1208,9 @@ tags: UTILITY, FAIRNESS
   crossref     = {uksim08}
 }
 
-Simulation study of scheduling competing parallel task graphs. Not much in the way of theoretical results, but 
-interesting and potentially relevant to yield-based scheduling approaches.
+Simulation study of scheduling competing parallel task graphs. Not much in the
+way of theoretical results, but interesting and potentially relevant to
+yield-based scheduling approaches.
 
 tags: SCHEDULING, PTG
 
@@ -1295,8 +1301,9 @@ tags: ENERGY, SLA, SERVICE HOSTING
   pages        = {103--116}
 }
 
-A couple of nice algorithms and adversarial arguments, but even the online algorithms assume
-knowledge of processing times and ratio of largest to smallest job sizes.  Should mention.
+A couple of nice algorithms and adversarial arguments, but even the online
+algorithms assume knowledge of processing times and ratio of largest to smallest
+job sizes.  Should mention.
 
 tags: THEORY, STRETCH
 
@@ -1650,10 +1657,11 @@ tags: ENERGY, RESOURCE REQUIREMENTS, PERFORMANCE MODELING
   pages        = {1396--1410}
 }
 
-This paper proposes a model for predicting the performance impact of using various combinations of voltage scaling
-and concurrency control on various scientific and parallel workloads. It requires instrumenting the code and 
-doing some benchmarking; however, they seem to think that once they have a model it can be applied to a variety
-of applications.
+This paper proposes a model for predicting the performance impact of using
+various combinations of voltage scaling and concurrency control on various
+scientific and parallel workloads. It requires instrumenting the code and doing
+some benchmarking; however, they seem to think that once they have a model it
+can be applied to a variety of applications.
 
 tags: ENERGY, RESOURCE REQUIREMENTS, PERFORMANCE MODELING
 
@@ -1746,11 +1754,12 @@ tags: THEORY, BIN PACKING, BIN STRETCHING
   pages        = {181--191}
 }
 
-The authors try to find resource allocations that maximize "weighted energy-delay product gain", where 
-energy-delay product (EDP) is the ratio of energy to performance (lower is better) and the gain is the improvement
-they get with their resource allocation. The focus here is on a single node with multiple processors, and the 
-allocation is basically how many cores to give to each running process, so it's not directly applicable, really,
-but it is relevant.
+The authors try to find resource allocations that maximize "weighted
+energy-delay product gain", where energy-delay product (EDP) is the ratio of
+energy to performance (lower is better) and the gain is the improvement they get
+with their resource allocation. The focus here is on a single node with multiple
+processors, and the allocation is basically how many cores to give to each
+running process, so it's not directly applicable, really, but it is relevant.
 
 tags: ENERGY, RESOURCE REQUIREMENTS
 
@@ -1796,7 +1805,8 @@ tags: RESOURCE REQUIREMENTS, VM
   pages        = {57--71}
 }
 
-Hybrid implementations can perform better, but are not well supported, so you have to be careful.
+Hybrid implementations can perform better, but are not well supported, so you
+have to be careful.
 
 tags: MPI, OpenMP
 
@@ -1821,10 +1831,11 @@ tags: THEORY
   pages        = {179--188}
 }
 
-This is a good reference and should definitely be cited. The focus here is on allowing for
-custom OS images for jobs and federating separate clusters into a larger supercluster.
-There is also some discussion of preempting and migrating jobs, but the focus seems to be on
-node-level (i.e., not time-shared) allocations.
+This is a good reference and should definitely be cited. The focus here is on
+allowing for custom OS images for jobs and federating separate clusters into a
+larger supercluster.  There is also some discussion of preempting and migrating
+jobs, but the focus seems to be on node-level (i.e., not time-shared)
+allocations.
 
 tags: VM CLUSTER
 
@@ -1835,8 +1846,9 @@ tags: VM CLUSTER
   pages        = {440--451}
 }
 
-The basic message isn't really that different from everything else: virtualization can
-be done with low overhead, there are some obvious benefits, much work remains.
+The basic message isn't really that different from everything else:
+virtualization can be done with low overhead, there are some obvious benefits,
+much work remains.
 
 tags: VM CLUSTER, VIRTUAL MACHINE, HPC
 
@@ -1894,11 +1906,11 @@ tags: THEORY, BIN PACKING, BIN STRETCHING
   pages        = {57--66}
 }
 
-This article has obvious relevance, and even provides an interpretation of packing jobs
-requiring varying amount of resources onto servers. In this formulation though it is the
-size of the bins which can vary rather than the size of the job. In principal that's not
-really a problem. The formulation is on-line, so maybe there's some help for what to do
-between repacking times?
+This article has obvious relevance, and even provides an interpretation of
+packing jobs requiring varying amount of resources onto servers. In this
+formulation though it is the size of the bins which can vary rather than the
+size of the job. In principal that's not really a problem. The formulation is
+on-line, so maybe there's some help for what to do between repacking times?
 
 tags: THEORY, BIN PACKING, BIN STRETCHING, VECTOR PACKING
 
@@ -1963,14 +1975,15 @@ tags: BIN PACKING, GENETIC, HEURISTICS
   pages        = {5--30}
 }
 
-This paper details a scheduling solution based on Xen. It is in many ways similar to our work,
-but designed to solve a specific issue: Chemistry researchers want to be able to run large
-parallel jobs with quick turnaround while Physics researchers want to be able to submit lots
-of serial jobs that have both short and long runtimes. The proposed solution creates two 
-virtual clusters with two virtual machines on each node and suspends serial jobs as needed.
-Parallel jobs are not suspended for technical reasons (is this going to be a problem for us?)
-to make up for this virtual nodes from the parallel cluster can be borrowed for serial jobs,
-but not vice versa.
+This paper details a scheduling solution based on Xen. It is in many ways
+similar to our work, but designed to solve a specific issue: Chemistry
+researchers want to be able to run large parallel jobs with quick turnaround
+while Physics researchers want to be able to submit lots of serial jobs that
+have both short and long runtimes. The proposed solution creates two virtual
+clusters with two virtual machines on each node and suspends serial jobs as
+needed.  Parallel jobs are not suspended for technical reasons (is this going to
+be a problem for us?) to make up for this virtual nodes from the parallel
+cluster can be borrowed for serial jobs, but not vice versa.
 
 tags: VM CLUSTER
 
@@ -2200,7 +2213,8 @@ tags: THEORY, BIN PACKING
   pages        = {349--355}
 }
 
-This paper establishes that queue length is a better metric for load balancing than resource utilization.
+This paper establishes that queue length is a better metric for load balancing
+than resource utilization.
 
 tags: METRICS, RESOURCE REQUIREMENTS
 
@@ -2211,8 +2225,9 @@ tags: METRICS, RESOURCE REQUIREMENTS
   pages        = {515--528}
 }
 
-The authors of this paper give a MILP for the resource allocation problem considering 2 resources (CPU and memory)
-and then use the relaxation of the MILP to develop a heuristic that is a bit more sophisticated than RRNZ.
+The authors of this paper give a MILP for the resource allocation problem
+considering 2 resources (CPU and memory) and then use the relaxation of the MILP
+to develop a heuristic that is a bit more sophisticated than RRNZ.
 
 tags: EMBEDDED, SCHEDULING, VECTOR PACKING, MILP, HEURISTIC
 
@@ -2280,15 +2295,16 @@ tags: COSCHEDULING
   pages        = {1066--1077}
 }
 
-This paper lists common pitfalls in evaluating different job scheduling schemes, and
-particularly lists a lot of pitfalls for simulation experiments.
+This paper lists common pitfalls in evaluating different job scheduling schemes,
+and particularly lists a lot of pitfalls for simulation experiments.
 
-FIXME: list all of the pitfalls and develop a response to them, then find places to include
-these responses in the dissertation. Make references to the concerns listed wherever relevant
-and note either how we avoid them or why they cannot be avoided.
+FIXME: list all of the pitfalls and develop a response to them, then find places
+to include these responses in the dissertation. Make references to the concerns
+listed wherever relevant and note either how we avoid them or why they cannot be
+avoided.
 
-CITEME: it specifically says that while changing interarrival times is not ideal, it may be
-the least objectionable approach. Mention this.
+CITEME: it specifically says that while changing interarrival times is not
+ideal, it may be the least objectionable approach. Mention this.
 
 tags: WORKLOAD
 
@@ -2425,8 +2441,9 @@ tags: VM CLUSTER
   crossref     = {hpcvirt07}
 }
 
-Probably not a great reference since it is mostly concerned with finding a robust allocation of jobs on embedded
-systems, but still, there are some striking similarities.
+Probably not a great reference since it is mostly concerned with finding a
+robust allocation of jobs on embedded systems, but still, there are some
+striking similarities.
 
 tags: MILP
 
@@ -2546,9 +2563,10 @@ tags: VIRTUAL CLUSTER
   pages        = {229--262}
 }
 
-The authors develop a communication aware co-scheduler that skews priority for communicating jobs and Domain-0
-and perform experiments to show that it improves the performance of the TPC-W benchmark. Unfortunately, I don't
-know if there's any code available.
+The authors develop a communication aware co-scheduler that skews priority for
+communicating jobs and Domain-0 and perform experiments to show that it improves
+the performance of the TPC-W benchmark. Unfortunately, I don't know if there's
+any code available.
 
 tags: VM CLUSTER, COSCHEDULING, XEN
 
@@ -2611,9 +2629,10 @@ tags: VM
 }
 
 
-Yeah, so we can mess with the clock and make some resources appear to run much faster/slower
-relative to the clock than they do in the real world, with some caveats. Also, we can scale
-everything so that nothing appears to be slowed, but it is.
+Yeah, so we can mess with the clock and make some resources appear to run much
+faster/slower relative to the clock than they do in the real world, with some
+caveats. Also, we can scale everything so that nothing appears to be slowed, but
+it is.
 
 tags: RESOURCE REQUIREMENTS, PERFORMANCE MODELING
 
@@ -2677,10 +2696,11 @@ tags: THEORY, BIN PACKING
   pages        = {239--261}
 }
 
-This is a fairly high level paper that just proposes to have virtual hypervisors manage local hypervisors. 
-The propose a basic reallocation algorithm, but it basically just says that for each vm on an overloaded server, 
-find another server that can host it--continue until no longer overloaded. If no host can be found for a given
-vm then they say to just turn on another server.
+This is a fairly high level paper that just proposes to have virtual hypervisors
+manage local hypervisors.  The propose a basic reallocation algorithm, but it
+basically just says that for each vm on an overloaded server, find another
+server that can host it--continue until no longer overloaded. If no host can be
+found for a given vm then they say to just turn on another server.
 
 tags: VM, CLOUD 
 
@@ -2809,8 +2829,9 @@ tags: WORKLOAD
   pages        = {27--40}
 }
 
-This one preceeds the ding paper in referencing energy delay product. Seems to be a different group though. The
-real difference is that they hand-pick the regions whereas the later paper tries to derive them automatically.
+This one preceeds the ding paper in referencing energy delay product. Seems to
+be a different group though. The real difference is that they hand-pick the
+regions whereas the later paper tries to derive them automatically.
 
 tags: ENERGY 
 
@@ -2820,7 +2841,8 @@ tags: ENERGY
   crossref     = {ipdps06}
 }
 
-The authors are somewhat inspired by Urgaonkar, but they try to make statistical guarantees about the likelyhood of a QoS violation.
+The authors are somewhat inspired by Urgaonkar, but they try to make statistical
+guarantees about the likelyhood of a QoS violation.
 
 tags: VM, SERVICE HOSTING, SCHEDULING, RESOURCE REQUIREMENTS
 
@@ -2944,11 +2966,13 @@ tags: THEORY, DYNAMIC BIN PACKING, ADAPTATION
 ** Letter: J **
 ***************
 
-Okay, so the thrust of this is using Maui to test out different scheduling policies (apparently it contains an 
-integrated simulator). Some interesting points: a call for an open user model back in 2001, an attempt to apply
-Leinberger's idea (without significant impact because of the setup), and the same sort of user-estimate error 
-modeling error that Tsafrir later rails against. Also, the different backfilling strategies tried all did better
-than no backfilling, but none stood out as clearly superior.
+Okay, so the thrust of this is using Maui to test out different scheduling
+policies (apparently it contains an integrated simulator). Some interesting
+points: a call for an open user model back in 2001, an attempt to apply
+Leinberger's idea (without significant impact because of the setup), and the
+same sort of user-estimate error modeling error that Tsafrir later rails
+against. Also, the different backfilling strategies tried all did better than no
+backfilling, but none stood out as clearly superior.
 
 tags: BATCH, WORKLOAD, RUNTIME ESTIMATES
 
@@ -3143,8 +3167,8 @@ tags: RESOURCE REQUIREMENTS
   pages        = {391--402}
 }
 
-An okay treatment of the energy-vs-performance tradeoff that looks at scheduling bag-of-task jobs with deadlines
-on a homogeneous cluster.
+An okay treatment of the energy-vs-performance tradeoff that looks at scheduling
+bag-of-task jobs with deadlines on a homogeneous cluster.
 
 tags: ENERGY, RESOURCE REQUIREMENTS, RAJ
 
@@ -3164,7 +3188,8 @@ tags: VM CLUSTER
   crossref     = {ccgrid06}
 }
 
-This might be a good one for the simulation parameters, particular if we consider multisite.
+This might be a good one for the simulation parameters, particular if we
+consider multisite.
 
 tags:
 
@@ -3238,9 +3263,10 @@ tags: ENERGY?, RESOURCE REQUIREMENTS
 ** Letter: L **
 ***************
 
-Hey, a paper on scheduling VMs with a goal of minimizing energy usage. They assume performance needs are
-specified in order to avoid multi-objective optimization. Otherwise there are some striking similarities to
-our own problem...
+Hey, a paper on scheduling VMs with a goal of minimizing energy usage. They
+assume performance needs are specified in order to avoid multi-objective
+optimization. Otherwise there are some striking similarities to our own
+problem...
 
 tag: ENERGY, VIRTUAL MACHINE
 
@@ -3318,8 +3344,9 @@ tags: UTILITY
   pages        = {107--116}
 }
 
-This paper addresses scheduling a DAG on a cluster of somewhat heterogeneous (2 different types) of DVFS-enabled
-nodes, each with a set of allowed performance/voltage settings. The authors basically consider and try to optimize
+This paper addresses scheduling a DAG on a cluster of somewhat heterogeneous (2
+different types) of DVFS-enabled nodes, each with a set of allowed
+performance/voltage settings. The authors basically consider and try to optimize
 a linear combination of energy consumption and performance in terms of makespan.
 
 tags: ENERGY, SCHEDULING
@@ -3437,8 +3464,9 @@ tags: WORKLOAD
   crossref     = {ipdps10}
 }
 
-The basic idea here is to try a couple different algorithms for automatically breaking a program up into
-computation and communication regions and then lowering the power on the CPU during communications.
+The basic idea here is to try a couple different algorithms for automatically
+breaking a program up into computation and communication regions and then
+lowering the power on the CPU during communications.
 
 tags: ENERGY, DYNAMIC VOLTAGE FREQUENCY SCALING, REGION FINDING
 
@@ -3631,10 +3659,11 @@ tags: VM CLUSTER
   pages        = {167--181}
 }
 
-This is yet another sort of generic VMs for service hosting paper. They take historic data
-(CPU utilization) and average it to get resource requirements, but propose in the future to use 
-smarter predictive modeling. They formulate a generic constraint satisfaction problem that in theory
-can accomodate any number of static or dynamic resource constraints and find a solution using a solver.
+This is yet another sort of generic VMs for service hosting paper. They take
+historic data (CPU utilization) and average it to get resource requirements, but
+propose in the future to use smarter predictive modeling. They formulate a
+generic constraint satisfaction problem that in theory can accomodate any number
+of static or dynamic resource constraints and find a solution using a solver.
 They mention Leinberger but don't use the heuristics.
 
 tags: VM, RESOURCE ALLOCATION, SERVICE HOSTING, RESOURCE REQUIREMENTS
@@ -3646,9 +3675,10 @@ tags: VM, RESOURCE ALLOCATION, SERVICE HOSTING, RESOURCE REQUIREMENTS
   pages        = {363--370}
 }
 
-Pretty theoretical; he basically makes the assumption that jobs execute in time demand/total-load * cpu share,
-which is kind of obvious. Beam search is used to search the space of possible cpu allocations, which is 
-interesting, but there isn't a lot of new information here for us to work with.
+Pretty theoretical; he basically makes the assumption that jobs execute in time
+demand/total-load * cpu share, which is kind of obvious. Beam search is used to
+search the space of possible cpu allocations, which is interesting, but there
+isn't a lot of new information here for us to work with.
 
 tags: VM, RESOURCE ALLOCATION
 
@@ -3694,8 +3724,9 @@ tags: BURSTINESS
   pages        = {265--286}
 }
 
-This paper talks about a model for distributing a workload in a data center based on the idea of minimizing
-hotspots in order to reduce cooling costs. It's certainly something to consider!
+This paper talks about a model for distributing a workload in a data center
+based on the idea of minimizing hotspots in order to reduce cooling costs. It's
+certainly something to consider!
 
 tags: ENERGY
 
@@ -3880,7 +3911,8 @@ tags: VM CLUSTER, CLOUD
 ** Letter: O **
 ***************
 
-This one is in here primarily to talk about the need for scalability in internet services.
+This one is in here primarily to talk about the need for scalability in internet
+services.
 
 tags:
 
@@ -3906,7 +3938,7 @@ tags: VM, I/O
   crossref     = {vee08}
 }
 
-This would seem to be another paper on the vector partiotioning problem to
+This would seem to be another paper on the vector partitioning problem to
 optimize convex objective functions. How does this differ from Hwang?
 
 tags: VECTOR PARTITION
@@ -4034,8 +4066,9 @@ tags: COSCHEDULING
   pages        = {113--136}
 }
 
-The authors present the problem of scheduling jobs to meet QoS constraints as a varible-sized bin packing problem.
-They provide a MILP and run some simulation experiments based on real trace data using CPLEX.
+The authors present the problem of scheduling jobs to meet QoS constraints as a
+varible-sized bin packing problem.  They provide a MILP and run some simulation
+experiments based on real trace data using CPLEX.
 
 tags: VM CLUSTER, SERVICE HOSTING, BIN PACKING, ENERGY, MILP, OPTIMIZATION, DVFS
 
@@ -4188,8 +4221,8 @@ tags: HEURISTICS, BIN PACKING, VECTOR PACKING
   pages        = {124--128}
 }
 
-This system looks a lot like what we want to develop. There's a lot of systems work, but not
-much in the way of algorithms though.
+This system looks a lot like what we want to develop. There's a lot of systems
+work, but not much in the way of algorithms though.
 
 tags: VM CLUSTER, ADAPTATION
 
@@ -4200,8 +4233,9 @@ tags: VM CLUSTER, ADAPTATION
   pages        = {5--14}
 }
 
-Memory pressure and paging is a problem for gang scheduled apps. They explore some smarter ways of selecting pages
-to page in/out based on when jobs are running, but performance is still not as good as on a dedicated system.
+Memory pressure and paging is a problem for gang scheduled apps. They explore
+some smarter ways of selecting pages to page in/out based on when jobs are
+running, but performance is still not as good as on a dedicated system.
 
 tags: GANG, MEMORY
 
@@ -4462,8 +4496,9 @@ tags:
   pages        = {341--352}
 } 
 
-Basically, we can use preemption to do more aggressive backfilling. This paper semi-pre-dates VM tech, so
-there are some assumptions that preempting big parallel jobs means they'll have to be started over from scratch.
+Basically, we can use preemption to do more aggressive backfilling. This paper
+semi-pre-dates VM tech, so there are some assumptions that preempting big
+parallel jobs means they'll have to be started over from scratch.
 
 tags: BATCH, PREEMPTION
 
@@ -4521,11 +4556,11 @@ tags: RESOURCE REQUIREMENTS
   pages        = {148--155}
 }
 
-okay: the physical footprint, the actual resources consumed by a virtual machine may
-be consistent across a homogeneous cluster, but it can be affected by such things as 
-its interaction with other vms, the physical characteristics of its host, distance from data,
-etc. This is a great "future work" paper, but we're basically ignorning it for our current
-research.
+okay: the physical footprint, the actual resources consumed by a virtual machine
+may be consistent across a homogeneous cluster, but it can be affected by such
+things as its interaction with other vms, the physical characteristics of its
+host, distance from data, etc. This is a great "future work" paper, but we're
+basically ignorning it for our current research.
 
 tags: RESOURCE REQUIREMENTS?, VM
 
@@ -4644,9 +4679,10 @@ tags: GANG
   pages        = {55--62}
 }
 
-The focus of this paper is on embeded multiprocessor synthesis, that is, designing multiprocessors to run known
-dags with minimal resource requirements. The authors present a heuristic for packing temporary communicating tasks
-with dependencies on nodes with limited cpu and memory capacities. 
+The focus of this paper is on embedded multiprocessor synthesis, that is,
+designing multiprocessors to run known dags with minimal resource requirements.
+The authors present a heuristic for packing temporary communicating tasks with
+dependencies on nodes with limited cpu and memory capacities. 
 
 tags: EMBEDDED, SCHEDULING, VECTOR PACKING
 
@@ -4704,8 +4740,9 @@ tags: DYNAMIC, OPTIMIZATION, MULTI-OBJECTIVE
   howpublished = {arXiv:1103.4820v1}
 }
 
-Okay, this paper considers a sort of multi-criteria fuzzy optimization problem version. Lots
-of good review and related work. CITEME! Also consider for ADAPTATION!!!
+Okay, this paper considers a sort of multi-criteria fuzzy optimization problem
+version. Lots of good review and related work. CITEME! Also consider for
+ADAPTATION!!!
 
 Also, lots more refs!!!!
 runtime inference paper
@@ -4724,9 +4761,10 @@ tags: VM CLUSTER
   pages        = {40--51}
 }
 
-This paper is primarily about the Vampir/Guide View instrumentation and profiling suite. So the results show that
-instrumenting apps doesn't adversely affect their run-times overmuch (if done properly), but we don't have any
-nice models for resource utilization or anything useful like that.
+This paper is primarily about the Vampir/Guide View instrumentation and
+profiling suite. So the results show that instrumenting apps doesn't adversely
+affect their run-times overmuch (if done properly), but we don't have any nice
+models for resource utilization or anything useful like that.
 
 tags:
 
@@ -5164,8 +5202,7 @@ tags: VM CLUSTER
   crossref     = {vtdc06}
 }
 
-This is mostly the same stuff as the other paper. How did they get two
-publications out of it?
+This is mostly the same stuff as the other paper. 
 
 tags: VM CLUSTER
 
@@ -5192,7 +5229,7 @@ tags: VM HPC
 ***************
 
 This paper explores the idea of combining gang scheduling with a queue and
-backfilling in order to keep the number of time quanta from becomming to large.
+backfilling in order to keep the number of time quanta from becoming too large.
 We could do the same thing with Flexible Scheduling.
 
 tags: GANG
